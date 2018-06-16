@@ -1,0 +1,34 @@
+---
+title: "Beta RGC mosaics"
+author: "Stephen J Eglen"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r rsetup-knitr,eval=TRUE,include=FALSE}
+require(knitr)
+options(width=60)
+opts_chunk$set(cache=TRUE)
+```
+
+
+# Loading packages
+
+We depend on several packages from CRAN, and several written by SJE:
+
+```{r}
+require(splancs) || install.package("splancs")
+```
+
+
+
+
+# References
+
+Eglen SJ, Diggle PJ, Troy JB (2005) Homotypic constraints dominate
+positioning of on- and off-center beta retinal ganglion cells. Vis
+Neurosci 22:859–871 Available at:
+<http://dx.doi.org/10.1017/S0952523805226147>.
