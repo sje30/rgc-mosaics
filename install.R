@@ -1,1 +1,1 @@
-install.packages("splancs", "spatstat")
+install.packages(c("splancs", "spatstat"))
