@@ -15,7 +15,7 @@ opts_chunk$set(cache=TRUE)
 ```
 
 
-# Loading packages
+# Initialisation
 
 We depend on several packages from CRAN, and several written by SJE:
 
@@ -525,7 +525,7 @@ save(w81s1.arr, sim.on, sim.of, w81s1.ci,file="bpipp_w81s1_date_1.Rda",
      compress=TRUE)
 ```
 
-## Output figures
+# Output figures
 
 ```{r, fig.width=6, fit.height=6, fig.cap="W81S1 Goodness of fit (Figure 7 of paper)"}
 w81s1.plot(FALSE)
