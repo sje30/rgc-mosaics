@@ -526,12 +526,12 @@ save(w81s1.arr, sim.on, sim.of, w81s1.ci,file="bpipp_w81s1_date_1.Rda",
 ```
 
 
-```{r, fig.width=6, fit.height=6, fig.cap="M623 Goodness of fit"}
-m623.plot(FALSE)
+```{r, fig.width=6, fit.height=6, fig.cap="W81S1 Goodness of fit (Figure 7 of paper)"}
+w81s1.plot(FALSE)
 ```
 
-```{r, fig.width=6, fit.height=6, fig.cap="W81S1 Goodness of fit"}
-w81s1.plot(FALSE)
+```{r, fig.width=6, fit.height=6, fig.cap="M623 Goodness of fit (Figure 8 of paper)"}
+m623.plot(FALSE)
 ```
 
 
