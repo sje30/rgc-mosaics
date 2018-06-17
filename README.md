@@ -10,6 +10,13 @@ You will need a copy of [R](http://www.r-project.org).  Download all
 the files in this folder.  Then start R and type:
 
 ```
+source('install.R')  ## need do this once only.
+```
+
+to install all the R packages necessary.  Once this completes, you can
+then run the analysis using:
+
+```
 rmarkdown::render('rgc-mosaics.Rmd')
 ```
 
