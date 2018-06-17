@@ -42,4 +42,5 @@ Following examples from <https://github.com/binder-examples/r>
 Eglen SJ, Diggle PJ, Troy JB (2005) Homotypic constraints dominate
 positioning of on- and off-center beta retinal ganglion cells. Vis
 Neurosci 22:859–871 Available at:
-<http://dx.doi.org/10.1017/S0952523805226147>.
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1513157/>
+
