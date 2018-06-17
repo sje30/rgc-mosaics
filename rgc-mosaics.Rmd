@@ -155,10 +155,11 @@ lplot <- function(arr, ci=NULL, r=NULL, ylab, do.krank=FALSE, ...) {
   }
 }
 
-w81s1.plot <- function(){
-  pdf(file="w81s1_gof2t.pdf",
-      ##horiz=F,
-      onefile=FALSE, width=7, height=9)
+w81s1.plot <- function(pdf=TRUE){
+  if (pdf) {
+    pdf(file="w81s1_gof2t.pdf",
+        onefile=FALSE, width=7, height=9)
+  }
   par(mar=c(3,4, 1, 1), mfrow=c(4,2), bty='n', las=1,oma=c(1,0,0,0))
   lplot(w81s1.arr$get()$l1,  w81s1.ci$l1,
         ylab=expression(L[1]))
@@ -173,13 +174,14 @@ w81s1.plot <- function(){
   plot.spat.opp2(w81s1.arr$get()$opp, cex=0.1, real.col='black')
   plot.spat.ri3.v2(w81s1.arr$get()$ri3, cex=0.1, real.col='black')
   ##mtext('W81s1 29 Oct 2004; bivariate pipp theta1=theta2=(45, 41.53, 2.66), d12=18', side=1, outer=T)
-  dev.off()
+  if (pdf) {dev.off()}
 }
 
-m623.plot <- function() {
-  pdf(file="m623_gof2t.pdf",
-      ##horiz=F,
-      onefile=FALSE, width=7, height=9)
+m623.plot <- function(pdf=TRUE) {
+  if(pdf) {
+    pdf(file="m623_gof2t.pdf",
+        onefile=FALSE, width=7, height=9)
+  }
   par(mar=c(3,4, 1, 1), mfrow=c(4,2), bty='n', las=1,oma=c(1,0,0,0))
   lplot(m623.arr$get()$l1,  m623.ci$l1,   ylab=expression(L[1]))
   lplot(m623.arr$get()$l2,  m623.ci$l2,   ylab=expression(L[2]))
@@ -190,7 +192,7 @@ m623.plot <- function() {
   plot.spat.opp2(m623.arr$get()$opp, cex=.1, real.col='black')
   plot.spat.ri3.v2(m623.arr$get()$ri3, cex=.1, real.col='black')
   ##mtext('W81s1 29 Oct 2004; bivariate pipp theta1=theta2=(45, 41.53, 2.66), d12=18', side=1, outer=T)
-  dev.off()
+  if (pdf) {dev.off()}
 }
 
 m623.handplot <- function() {
@@ -335,7 +337,7 @@ w81s.bdpar <- list( steps=seq(from=1, to=150, length=100),
 ## Should we look at non-parametric estimates of h?
 estimate.h <- FALSE
 
-nreps <- 49
+nreps <- 99
 
 ##Fri 03 Jun 2005: trying hand generated params.
 try.hand <- FALSE
@@ -523,6 +525,14 @@ save(w81s1.arr, sim.on, sim.of, w81s1.ci,file="bpipp_w81s1_date_1.Rda",
      compress=TRUE)
 ```
 
+
+```{r, fig.width=6, fit.height=6, fig.cap="M623 Goodness of fit"}
+m623.plot(FALSE)
+```
+
+```{r, fig.width=6, fit.height=6, fig.cap="W81S1 Goodness of fit"}
+w81s1.plot(FALSE)
+```
 
 
 
