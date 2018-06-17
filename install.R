@@ -1,4 +1,8 @@
-install.packages(c("splancs", "spatstat", "knitr", "devtools"))
+## Installation script.
+## source('install.R')
+## to install these packages.
+
+install.packages(c("splancs", "spatstat", "knitr", "devtools", "rmarkdown"))
 
 ## devtools::install_github('sje30/sjedrp')
 
